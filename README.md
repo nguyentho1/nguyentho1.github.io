@@ -1,4 +1,4 @@
-# Nguyen Ngoc Tho — Personal Academic Website
+# Nguyen Tho — Personal Academic Website
 
 A static academic website for GitHub Pages deployment.
 
