@@ -39,4 +39,4 @@ Place your CV as `assets/cv.pdf` — the download button links there automatical
 ```
 
 ## Contact
-Nguyen Ngoc Tho · thon@uda.edu.vn · ORCID: 0000-0002-9612-8476
+Nguyen Tho · ngthodhy@gmail.com · ORCID: 0000-0002-9612-8476
