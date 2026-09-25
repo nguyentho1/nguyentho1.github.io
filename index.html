@@ -1233,6 +1233,60 @@ a:focus-visible, button:focus-visible {
 <article class="blog-post" data-cat="ai-health"><div class="post-inner">
 <div class="post-meta">
 <span class="post-date">Sep 2026</span>
+<span class="badge" style="background:var(--purple-bg);color:var(--purple);">Bayesian Methods</span>
+</div>
+<div class="post-title">Bayesian Uncertainty in Heart Disease Prediction: Credible Intervals vs. p-values</div>
+<div class="post-body collapsible">
+<p>Classical logistic regression tells us a predictor is "significant." Bayesian analysis tells us <em>how confident</em> we are in the estimate — and that distinction matters enormously in clinical decision-making. In this project, I applied Bayesian logistic regression to the Cleveland Heart Disease dataset to predict 10-year cardiovascular risk, replacing point estimates with full posterior distributions and 95% credible intervals.</p>
+<p>Using <code>PyMC</code> with NUTS sampling, the model yields interpretable probability distributions for each coefficient — so a clinician can see not just that age is a risk factor, but the plausible range of its effect size. ST depression, number of major vessels, and chest pain type emerged as the strongest predictors, with tight credible intervals confirming reliable estimation.</p>
+<p>Future work will extend this to hierarchical models that pool estimates across hospital sites, and will explore prior sensitivity analysis to assess how much clinical assumptions influence posterior predictions — critical for deployment in settings like Vietnamese district hospitals where data may be sparse. <a href="https://github.com/nguyentho1/credible_interval/tree/main" target="_blank">View on GitHub →</a></p>
+</div>
+<button class="post-toggle" onclick="togglePost(this)" type="button">Read more</button><div class="post-tags">
+<span class="post-tag">Bayesian</span>
+<span class="post-tag">PyMC</span>
+<span class="post-tag">Heart Disease</span>
+<span class="post-tag">Credible Intervals</span>
+</div>
+</div></article>
+<article class="blog-post" data-cat="ai-health"><div class="post-inner">
+<div class="post-meta">
+<span class="post-date">Aug 2026</span>
+<span class="badge" style="background:var(--blue-bg);color:var(--blue);">Predictive Modeling</span>
+</div>
+<div class="post-title">Predicting Medical Appointment No-Shows: A Machine Learning Approach to Reducing Wasted Capacity</div>
+<div class="post-body collapsible">
+<p>Missed appointments are a silent drain on healthcare systems — in Brazil's public clinics alone, no-show rates exceed 20%, and the pattern is no different across Southeast Asia. In this project, I analyzed 110,000+ appointment records to identify the strongest predictors of non-attendance: lead time between scheduling and appointment, SMS reminder receipt, neighbourhood socioeconomic profile, and prior no-show history.</p>
+<p>Using a Random Forest classifier with SMOTE oversampling to handle class imbalance, the model achieves strong discrimination (AUC 0.78). Feature importance analysis confirmed that patients scheduled more than 15 days in advance with a history of prior no-shows are the highest-risk group — a finding directly actionable via targeted reminder protocols.</p>
+<p>The next development phase will incorporate time-series features (day-of-week patterns, seasonal effects) and test a cost-sensitive learning approach that weights false negatives more heavily — reflecting the real-world asymmetry where an empty slot costs far more than an unnecessary reminder. <a href="https://github.com/nguyentho1/medical_appointment_no_show" target="_blank">View on GitHub →</a></p>
+</div>
+<button class="post-toggle" onclick="togglePost(this)" type="button">Read more</button><div class="post-tags">
+<span class="post-tag">Random Forest</span>
+<span class="post-tag">SMOTE</span>
+<span class="post-tag">Healthcare Operations</span>
+<span class="post-tag">No-Show Prediction</span>
+</div>
+</div></article>
+<article class="blog-post" data-cat="ai-health"><div class="post-inner">
+<div class="post-meta">
+<span class="post-date">Jul 2026</span>
+<span class="badge" style="background:var(--amber-bg);color:var(--amber);">Infection Control</span>
+</div>
+<div class="post-title">Hospital-Associated Infection Surveillance: Turning Administrative Data into an Early-Warning Signal</div>
+<div class="post-body collapsible">
+<p>Hospital-associated infections (HAIs) — including CLABSI, CAUTI, and SSIs — account for significant morbidity and preventable mortality in inpatient settings. In this project, I built a surveillance pipeline using administrative hospital data to detect HAI clusters and flag wards with above-expected infection rates, applying statistical process control (SPC) charts alongside logistic regression models for individual-level risk scoring.</p>
+<p>The analysis integrates patient-level covariates (age, length of stay, procedure type, antibiotic exposure) with ward-level denominators to produce risk-adjusted infection rates. CUSUM control charts on the time series allow real-time detection of sustained upward shifts — the kind of signal that precedes outbreaks but is typically invisible until a ward-level review meeting weeks later.</p>
+<p>Planned extensions include integration with antibiogram data to detect emerging resistance patterns, and a Streamlit dashboard for infection control nurses to monitor their ward in real time without needing to query the raw database. The long-term goal is a lightweight, deployable HAI monitoring tool calibrated for Vietnamese public hospital data structures. <a href="https://github.com/nguyentho1/hospital_associated_infection" target="_blank">View on GitHub →</a></p>
+</div>
+<button class="post-toggle" onclick="togglePost(this)" type="button">Read more</button><div class="post-tags">
+<span class="post-tag">HAI</span>
+<span class="post-tag">SPC Charts</span>
+<span class="post-tag">Infection Control</span>
+<span class="post-tag">Surveillance</span>
+</div>
+</div></article>
+<article class="blog-post" data-cat="ai-health"><div class="post-inner">
+<div class="post-meta">
+<span class="post-date">Sep 2026</span>
 <span class="badge" style="background:var(--blue-bg);color:var(--blue);">AI in Healthcare</span>
 </div>
 <div class="post-title">Why Transformer Models Are Changing How We Think About Tabular Clinical Data</div>
@@ -1334,7 +1388,6 @@ a:focus-visible, button:focus-visible {
 </div>
 </div></article>
 </section>
-
 <!-- ═══════════════════════════════════════
      PUBLICATIONS
 ════════════════════════════════════════ -->
