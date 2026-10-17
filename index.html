@@ -864,16 +864,27 @@ a:focus-visible, button:focus-visible {
 
 /* ── BLOG / NEWS ── */
 .blog-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.75rem; }
-
+  
 .blog-post {
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 1.35rem 1.5rem;
-  background: var(--surface);
-  margin-bottom: 1.1rem;
-  transition: border-color 0.12s;
-}
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 1.35rem 1.5rem;
+    background: var(--surface);
+    margin-bottom: 1.1rem;
+    transition: border-color 0.12s;
+  }
 .blog-post:hover { border-color: var(--accent-dk); }
+
+/* ── ADD THIS NEW RULE HERE ── */
+.blog-post .post-image {
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    object-fit: contain;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: block;
+  }
 
 .post-meta {
   display: flex;
